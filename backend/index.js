@@ -4,7 +4,7 @@ var cors = require('cors')
 
 const app = express();
 const port = 5000;
-mongoose.connect("mongodb+srv://shashankpeddinti07:UrE22NhfARxDtg5N@clusterinotebook.ddhcthl.mongodb.net/inotebook").then(() => {
+mongoose.connect("mongodb+srv://shashankpeddinti07:eOOcBP8eiHXLUBrI@clusternew.d3dud4l.mongodb.net/inotebookdb").then(() => {
     console.log("Database Connected");
 }).catch((e) => {
     console.log(e);

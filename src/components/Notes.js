@@ -77,7 +77,7 @@ const Notes = () => {
                 <div className="container mx-2"> 
                 {notes.length===0 && 'No notes to display'}
                 </div>
-                {notes && notes.map((note) => {
+            {notes && notes.map((note) => {
     return (
       <Noteitem
         key={note._id}
