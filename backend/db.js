@@ -3,7 +3,7 @@
 
 const mongoose = require('mongoose');
 
-const mongoURI = " mongodb://localhost:27017/inotebook2024";
+const mongoURI = "mongodb+srv://shashankpeddinti07:UrE22NhfARxDtg5N@clusterinotebook.ddhcthl.mongodb.net/inotebook";
 
 
 const connectToMongo = async()=>{
