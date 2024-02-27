@@ -13,7 +13,7 @@ mongoose.connect("mongodb+srv://shashankpeddinti07:UrE22NhfARxDtg5N@clusterinote
 
 app.use(cors(
     {
-        origin : "",
+        origin : "https://inotebookfullstack.vercel.app",
         methods : ["GET", "POST","PUT","DELETE"],
         credentials:true,
     }
