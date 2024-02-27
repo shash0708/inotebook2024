@@ -11,13 +11,7 @@ mongoose.connect("mongodb+srv://shashankpeddinti07:eOOcBP8eiHXLUBrI@clusternew.d
     console.log("Database Can't Be Connected");
 });
 
-app.use(cors(
-    {
-        origin : "https://inotebookfullstack.vercel.app",
-        methods : ["POST","GET","PUT","DELETE"],
-        credentials : true
-    }
-))
+app.use(cors())
 
 app.use(express.json());
 
