@@ -1,13 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 var cors = require('cors')
-const dotenv = require('dotenv');
-const bodyParser = require('body-parser')
 
 const app = express();
 const port = 6000;
-dotenv.config();
-
 mongoose.connect("mongodb+srv://shashankpeddinti07:OFRFfChvWjqZ0bZG@cluster0.foqclvy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(() => {
     console.log("Database Connected");
 }).catch((e) => {
@@ -17,14 +13,13 @@ mongoose.connect("mongodb+srv://shashankpeddinti07:OFRFfChvWjqZ0bZG@cluster0.foq
 
 app.use(cors(
     {
-      origin : "https://inotebookfullstack.vercel.app",
+      origin : "https://attendence-49cr.vercel.app",
       methods : ["GET","POST","PUT","DELETE"],
       credentials : true
     }
   ));
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
 //availble routes
 app.use('/api/notes', require('./routes/notes.js'));
 app.use('/api/auth', require('./routes/auth.js'));

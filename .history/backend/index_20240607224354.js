@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 var cors = require('cors')
 const dotenv = require('dotenv');
-const bodyParser = require('body-parser')
 
 const app = express();
 const port = 6000;
@@ -23,8 +22,7 @@ app.use(cors(
     }
   ));
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
 //availble routes
 app.use('/api/notes', require('./routes/notes.js'));
 app.use('/api/auth', require('./routes/auth.js'));

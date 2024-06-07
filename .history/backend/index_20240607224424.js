@@ -23,8 +23,7 @@ app.use(cors(
     }
   ));
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
 //availble routes
 app.use('/api/notes', require('./routes/notes.js'));
 app.use('/api/auth', require('./routes/auth.js'));
