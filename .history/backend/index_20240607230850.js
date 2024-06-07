@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 //availble routes
 app.get('/',(req,res)=>{
-    res.send("Home route")
+    cons
 })
 app.use('/api/notes', require('./routes/notes.js'));
 app.use('/api/auth', require('./routes/auth.js'));
