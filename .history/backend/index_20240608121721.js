@@ -8,7 +8,7 @@ const app = express();
 const port = 5000;
 dotenv.config();
 const uri =  "mongodb+srv://shashankpeddinti07:OFRFfChvWjqZ0bZG@cluster0.foqclvy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-mongoose.connect(uri).then(() => {
+mongoose.connect("").then(() => {
     console.log("Database Connected");
 }).catch((e) => {
     console.log(e);
