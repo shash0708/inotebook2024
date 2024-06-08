@@ -16,11 +16,11 @@ mongoose.connect("mongodb+srv://shashankpeddinti07:OFRFfChvWjqZ0bZG@cluster0.foq
 });
 
 app.use(cors(
-    {
-      origin : "https://inotebook2024.vercel.app",
-      methods : ["GET","POST","PUT","DELETE"],
-      credentials : true
-    }
+    // {
+    //   origin : "https://inotebook2024.vercel.app",
+    //   methods : ["GET","POST","PUT","DELETE"],
+    //   credentials : true
+    // }
   ));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));

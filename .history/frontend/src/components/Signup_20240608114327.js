@@ -15,29 +15,28 @@ const Signup = (props) => {
     }
 
     
-    try {
-      const response = await fetch("https://inotebook2024.onrender.com/api/auth/createuser", { // Ensure this URL is correct
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ name, email, password })
+      const response = await fetch("http://localhost:600/api/auth/createuser", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({name,email,password}) // Send credentials in the request body
       });
 
       const json = await response.json();
       console.log(json);
 
       if (json.success) {
-          localStorage.setItem('token', json.authtoken);
-          alert("Account Created successfully");
-          navigate('/');
+        // Save the auth token and redirect
+        localStorage.setItem('token', json.authtoken);
+        alert("Account Created successfully")
+
+        navigate('/');
       } else {
-          console.log("Signup failed");
+        console.log("Signup failed");
       }
-  } catch (error) {
-      console.error('Error:', error);
-  }
-};
+   
+  };
 
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });

@@ -16,7 +16,7 @@ const Signup = (props) => {
 
     
     try {
-      const response = await fetch("https://inotebook2024.onrender.com/api/auth/createuser", { // Ensure this URL is correct
+      const response = await fetch("http://localhost:5000/api/auth/createuser", { // Ensure this URL is correct
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
